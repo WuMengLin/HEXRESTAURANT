@@ -75,7 +75,7 @@
             <router-link href="#" to="/admin/products" class="btn btn-warning">BACKSTAGE</router-link>
             <!--       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-            <div class="dropdown">
+            <div class="dropdown" @click="viewCart">
               <button
                 class="btn btn-cart text-white"
                 type="button"
@@ -280,6 +280,13 @@ export default {
     };
   },
   methods: {
+    viewCart(){
+      //GA事件
+      gtag('event', 'Btn Click', {
+        'event_category': 'Click',
+        'event_label': '查看購物車',
+      });
+    },
     getProducts(page = 1) {
       //page預設帶入為1
       const api = `${process.env.APIPATH}/api/${

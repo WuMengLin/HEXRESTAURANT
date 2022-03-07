@@ -153,19 +153,19 @@ export default {
     };
   },
   methods: {
-    getProduct(id,num) {
-      const api = `${process.env.APIPATH}/api/${
-        process.env.CUSTOMPATH
-      }/product/${id}`;
-      const vm = this;
-      vm.ststus.loadingItem = id;
-      this.$http.get(api).then(response => {
-        console.log("取得單一產品", response.data);
-        vm.ststus.loadingItem = "";
-        vm.product = response.data.product;
-        $("#productDetailModalLabel").modal("show");
-      });
-    },
+    // getProduct(id,num) {
+    //   const api = `${process.env.APIPATH}/api/${
+    //     process.env.CUSTOMPATH
+    //   }/product/${id}`;
+    //   const vm = this;
+    //   vm.ststus.loadingItem = id;
+    //   this.$http.get(api).then(response => {
+    //     console.log("取得單一產品", response.data);
+    //     vm.ststus.loadingItem = "";
+    //     vm.product = response.data.product;
+    //     $("#productDetailModalLabel").modal("show");
+    //   });
+    // },
     getProducts(page = 1) {
       //page預設帶入為1
       const api = `${process.env.APIPATH}/api/${
@@ -192,6 +192,34 @@ export default {
         vm.product = response.data.product;
         $("#productModal").modal("show");
         vm.product.num = 1;
+        //GA事件
+        gtag("event", "view_item", {
+          currency: "NTD",
+          value: vm.product.price,
+          items: [
+            {
+              item_id: vm.product.id,
+              item_name: vm.product.title,
+              affiliation: "HEXRESTAURANT",
+              coupon: "",
+              currency: "NTD",
+              discount: 0,
+              index: vm.product.num,
+              item_brand: "HEXRESTAURANT",
+              item_category: vm.product.category,
+              item_category2: "",
+              item_category3: "",
+              item_category4: "",
+              item_category5: "",
+              item_list_id: "",
+              item_list_name: "",
+              item_variant: "",
+              location_id: "",
+              price: vm.product.price,
+              quantity: 1
+            }
+          ]
+        });
       });
     },
     addtoCart(id, qty = 1) {

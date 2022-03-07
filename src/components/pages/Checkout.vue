@@ -378,7 +378,7 @@ export default {
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order`;
       const vm = this;
       const order = vm.form;
-      this.$validator.validate().then(result => {
+      this.$validator.validate().then(result => { //表單驗證結果
         if (result) {
           this.$http.post(api, { data: order }).then(response => {
             console.log("建立訂單", response.data);
