@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/test/dist/',
+    assetsPublicPath: '/project-ga/dist/',
 
     /**
      * Source Maps

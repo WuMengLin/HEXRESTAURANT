@@ -179,33 +179,6 @@ export default {
         vm.product = response.data.product;
         $("#productModal").modal("show");
         vm.product.num = 1;
-        gtag("event", "view_item", {
-          currency: "NTD",
-          value: vm.product.price,
-          items: [
-            {
-              item_id: vm.product.id,
-              item_name: vm.product.title,
-              affiliation: "HEXRESTAURANT",
-              coupon: "no_coupon",
-              currency: "NTD",
-              discount: 0,
-              index: 0,
-              item_brand: "HEXRESTAURANT",
-              item_category: vm.product.category,
-              item_category2: "",
-              item_category3: "",
-              item_category4: "",
-              item_category5: "",
-              item_list_id: "",
-              item_list_name: "",
-              item_variant: "",
-              location_id: "",
-              price: vm.product.price,
-              quantity: 1
-            }
-          ]
-        });
       });
     },
     addtoCart(item, id, qty = 1) {
@@ -221,33 +194,6 @@ export default {
         vm.ststus.loadingItem = "";
         this.$bus.$emit("updatacart:push");
         $("#productModal").modal("hide");
-        gtag("event", "add_to_cart", {
-          currency: "NTD",
-          value: item.price * item.num,
-          items: [
-            {
-              item_id: item.id,
-              item_name: item.title,
-              affiliation: "HEXRESTAURANT",
-              coupon: "no_coupon",
-              currency: "NTD",
-              discount: 0,
-              index: 0,
-              item_brand: "HEXRESTAURANT",
-              item_category: item.category,
-              item_category2: "",
-              item_category3: "",
-              item_category4: "",
-              item_category5: "",
-              item_list_id: "",
-              item_list_name: "",
-              item_variant: "",
-              location_id: "",
-              price: item.price,
-              quantity: item.num
-            }
-          ]
-        });
       });
     },
     ceateOrder() {

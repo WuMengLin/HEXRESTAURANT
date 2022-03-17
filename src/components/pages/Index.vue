@@ -233,7 +233,7 @@
               <h3>您是對料理懷抱熱情的廚藝青年嗎</h3>
               <br/>
               <p>短暫的激情是不值錢的，年代的人還需要摔打，別人一定會聽你，但它只是一環，80年代的人不要跟70年代，別人可以拷貝我的模式，一個成功的創業者，東西得一點點幹，也要注重過程，千萬別告訴別人，賺錢模式越多越說明你沒有模式。</p>
-              <a href="#" class="btn btn-outline-warning" @click="addUs_ga">加入我們</a>
+              <a href="#" class="btn btn-outline-warning">加入我們</a>
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@
               <h3>對於我們的服務有任何的建議嗎</h3>
               <br/>
               <p>短暫的激情是不值錢的，年代的人還需要摔打，別人一定會聽你，但它只是一環，80年代的人不要跟70年代，別人可以拷貝我的模式，一個成功的創業者，東西得一點點幹，也要注重過程，千萬別告訴別人，賺錢模式越多越說明你沒有模式。</p>
-              <a href="#" class="btn btn-outline-warning" @click="contactUs_ga">聯絡我們</a>
+              <a href="#" class="btn btn-outline-warning">聯絡我們</a>
             </div>
           </div>
         </div>
@@ -262,18 +262,6 @@ export default {
     return {};
   },
   methods: {
-    addUs_ga(){
-      gtag('event', 'Btn Click', {
-        'event_category': 'Click',
-        'event_label': '加入我們',
-      });
-    },
-    contactUs_ga(){
-      gtag('event', 'Btn Click', {
-        'event_category': 'Click',
-        'event_label': '聯絡我們',
-      });
-    }
   }
 };
 </script>

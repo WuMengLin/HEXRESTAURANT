@@ -300,10 +300,6 @@ export default {
           this.$http.post(api, { data: order }).then(response => {
             console.log("建立訂單", response.data);
             if(response.data.success){
-              gtag('event', 'Btn Click', {
-                'event_category': 'Click',
-                'event_label': '送出訂單',
-              });
               vm.$router.push(`/customer_checkout/${response.data.orderId}`);
             }
           });

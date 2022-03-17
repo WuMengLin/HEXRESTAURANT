@@ -76,7 +76,7 @@
             <!--       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
             <div class="dropdown">
-              <button @click="viewCart"
+              <button
                 class="btn btn-cart text-white"
                 type="button"
                 id="dropdownMenuButton"
@@ -281,39 +281,6 @@ export default {
     };
   },
   methods: {
-    viewCart(){
-      const vm=this;
-      for(let i=0;i<vm.cart.carts.length;i++){
-        vm.viewCartItem.push(
-          {
-            item_id: vm.cart.carts[i].product.id,
-            item_name: vm.cart.carts[i].product.title,
-            affiliation: "HEXRESTAURANT",
-            coupon: "no_coupon",
-            currency: "NTD",
-            discount: 0,
-            index: i,
-            item_brand: "HEXRESTAURANT",
-            item_category: vm.cart.carts[i].product.category,
-            item_category2: "",
-            item_category3: "",
-            item_category4: "",
-            item_category5: "",
-            item_list_id: "",
-            item_list_name: "",
-            item_variant: "",
-            location_id: "",
-            price: vm.cart.carts[i].product.price,
-            quantity: vm.cart.carts[i].qty
-          }
-        )
-      }
-      gtag("event", "view_cart", {
-        currency: "NTD",
-        value: vm.cart.final_total,
-        items: vm.viewCartItem
-      });
-    },
     getProducts(page = 1) {
       //page預設帶入為1
       const api = `${process.env.APIPATH}/api/${
