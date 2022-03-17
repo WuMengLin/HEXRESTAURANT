@@ -133,6 +133,7 @@ export default {
             coupon: "",
             items: vm.purchaseItem
           });
+          this.getOrder();
         }
       });
     }
