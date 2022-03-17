@@ -73,7 +73,8 @@ export default {
       orderId:'',
       order: {
         user:{},
-      }
+      },
+      purchaseItem:[]
     }
   },
   methods: {
@@ -86,6 +87,31 @@ export default {
         vm.isLoading = false;
         if(response.data.success){
           vm.order=response.data.order
+          for(let i=0;i<Object.keys(vm.order.products).length;i++){
+            vm.purchaseItem.push(
+              {
+                item_id: vm.order.products[Object.keys(vm.order.products)[i]].product.id,
+                item_name: vm.order.products[Object.keys(vm.order.products)[i]].product.title,
+                affiliation: "HEXRESTAURANT",
+                coupon: "no_coupon",
+                currency: "NTD",
+                discount: 0,
+                index: i,
+                item_brand: "HEXRESTAURANT",
+                item_category: vm.order.products[Object.keys(vm.order.products)[i]].product.category,
+                item_category2: "",
+                item_category3: "",
+                item_category4: "",
+                item_category5: "",
+                item_list_id: "",
+                item_list_name: "",
+                item_variant: "",
+                location_id: "",
+                price: vm.order.products[Object.keys(vm.order.products)[i]].product.price,
+                quantity: vm.order.products[Object.keys(vm.order.products)[i]].qty
+              }
+            )
+          }
         }
       });
     },
@@ -97,7 +123,16 @@ export default {
         console.log("結帳付款", response.data);
         vm.isLoading = false;
         if(response.data.success){
-          this.getOrder();
+          gtag("event", "purchase", {
+            transaction_id: vm.order.id,
+            affiliation: "HEXRESTAURANT",
+            value: vm.order.total,
+            tax: 0,
+            shipping: "",
+            currency: "NTD",
+            coupon: "",
+            items: vm.purchaseItem
+          });
         }
       });
     }

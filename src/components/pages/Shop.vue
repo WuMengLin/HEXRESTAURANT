@@ -63,7 +63,7 @@
                     <a
                       href="#"
                       class="btn btn-w1 btn-primary"
-                      @click.prevent="addtoCart(item.id)"
+                      @click.prevent="addtoCart(item,item.id)"
                     >加入購物車</a>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" @click.prevent="addtoCart(product.id,product.num)">加到購物車</button>
+            <button type="button" class="btn btn-primary" @click.prevent="addtoCart(product,product.id,product.num)">加到購物車</button>
           </div>
         </div>
       </div>
@@ -153,19 +153,6 @@ export default {
     };
   },
   methods: {
-    // getProduct(id,num) {
-    //   const api = `${process.env.APIPATH}/api/${
-    //     process.env.CUSTOMPATH
-    //   }/product/${id}`;
-    //   const vm = this;
-    //   vm.ststus.loadingItem = id;
-    //   this.$http.get(api).then(response => {
-    //     console.log("取得單一產品", response.data);
-    //     vm.ststus.loadingItem = "";
-    //     vm.product = response.data.product;
-    //     $("#productDetailModalLabel").modal("show");
-    //   });
-    // },
     getProducts(page = 1) {
       //page預設帶入為1
       const api = `${process.env.APIPATH}/api/${
@@ -192,7 +179,6 @@ export default {
         vm.product = response.data.product;
         $("#productModal").modal("show");
         vm.product.num = 1;
-        //GA事件
         gtag("event", "view_item", {
           currency: "NTD",
           value: vm.product.price,
@@ -201,10 +187,10 @@ export default {
               item_id: vm.product.id,
               item_name: vm.product.title,
               affiliation: "HEXRESTAURANT",
-              coupon: "",
+              coupon: "no_coupon",
               currency: "NTD",
               discount: 0,
-              index: vm.product.num,
+              index: 0,
               item_brand: "HEXRESTAURANT",
               item_category: vm.product.category,
               item_category2: "",
@@ -222,7 +208,7 @@ export default {
         });
       });
     },
-    addtoCart(id, qty = 1) {
+    addtoCart(item, id, qty = 1) {
       const vm = this;
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;
       vm.ststus.loadingItem = id;
@@ -235,10 +221,35 @@ export default {
         vm.ststus.loadingItem = "";
         this.$bus.$emit("updatacart:push");
         $("#productModal").modal("hide");
-        // vm.product=response.data.product;
+        gtag("event", "add_to_cart", {
+          currency: "NTD",
+          value: item.price * item.num,
+          items: [
+            {
+              item_id: item.id,
+              item_name: item.title,
+              affiliation: "HEXRESTAURANT",
+              coupon: "no_coupon",
+              currency: "NTD",
+              discount: 0,
+              index: 0,
+              item_brand: "HEXRESTAURANT",
+              item_category: item.category,
+              item_category2: "",
+              item_category3: "",
+              item_category4: "",
+              item_category5: "",
+              item_list_id: "",
+              item_list_name: "",
+              item_variant: "",
+              location_id: "",
+              price: item.price,
+              quantity: item.num
+            }
+          ]
+        });
       });
     },
-
     ceateOrder() {
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order`;
       const vm = this;
@@ -282,11 +293,9 @@ export default {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
   transition: box-shadow 0.3s;
 }
-
 .box-shadow:hover {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.24);
 }
-
 .btn.disabled {
   pointer-events: none;
 }
@@ -301,5 +310,4 @@ export default {
     height: 100%;
     object-fit: cover;
 }
-
 </style>

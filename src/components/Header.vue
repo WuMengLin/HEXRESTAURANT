@@ -75,8 +75,8 @@
             <router-link href="#" to="/admin/products" class="btn btn-warning">BACKSTAGE</router-link>
             <!--       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-            <div class="dropdown" @click="viewCart">
-              <button
+            <div class="dropdown">
+              <button @click="viewCart"
                 class="btn btn-cart text-white"
                 type="button"
                 id="dropdownMenuButton"
@@ -276,15 +276,42 @@ export default {
           address: ""
         },
         message: ""
-      }
+      },
+      viewCartItem:[]
     };
   },
   methods: {
     viewCart(){
-      //GA事件
-      gtag('event', 'Btn Click', {
-        'event_category': 'Click',
-        'event_label': '查看購物車',
+      const vm=this;
+      for(let i=0;i<vm.cart.carts.length;i++){
+        vm.viewCartItem.push(
+          {
+            item_id: vm.cart.carts[i].product.id,
+            item_name: vm.cart.carts[i].product.title,
+            affiliation: "HEXRESTAURANT",
+            coupon: "no_coupon",
+            currency: "NTD",
+            discount: 0,
+            index: i,
+            item_brand: "HEXRESTAURANT",
+            item_category: vm.cart.carts[i].product.category,
+            item_category2: "",
+            item_category3: "",
+            item_category4: "",
+            item_category5: "",
+            item_list_id: "",
+            item_list_name: "",
+            item_variant: "",
+            location_id: "",
+            price: vm.cart.carts[i].product.price,
+            quantity: vm.cart.carts[i].qty
+          }
+        )
+      }
+      gtag("event", "view_cart", {
+        currency: "NTD",
+        value: vm.cart.final_total,
+        items: vm.viewCartItem
       });
     },
     getProducts(page = 1) {
@@ -336,10 +363,8 @@ export default {
         console.log("加入購物車", response.data);
         vm.ststus.loadingItem = "";
         this.getCarts();
-        // vm.product=response.data.product;
       });
     },
-
     removeCartItem(id) {
       const vm = this;
       const api = `${process.env.APIPATH}/api/${
@@ -351,7 +376,6 @@ export default {
         this.getCarts();
       });
     },
-
     addCouponCode() {
       const vm = this;
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/coupon`;
@@ -363,7 +387,6 @@ export default {
         this.getCarts();
       });
     },
-
     ceateOrder() {
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/order`;
       const vm = this;
