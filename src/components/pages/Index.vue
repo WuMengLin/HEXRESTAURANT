@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="bg-info text-white">
+    <section class="bg-warning text-white">
       <div class="container py-5">
         <div class="row">
           <div class="col-md-4 text-center">
@@ -21,7 +21,7 @@
             <div>
               <i class="fas fa-cat fa-4x mb-2"></i>
             </div>
-            <h3>心理諮商中的提亞醬</h3>
+            <h3>心理諮商中的提亞</h3>
             <p>「心理諮商有什麼用？」「他能讓我交到朋友嗎？」心理諮商並不能「解決」所有問題，但是諮商心理師能夠陪伴您一起去看看，在面對困境時，問題的癥結點在哪。</p>
           </div>
         </div>

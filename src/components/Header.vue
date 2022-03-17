@@ -8,7 +8,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <router-link class="navbar-brand font-weight-bold" href="#" to="/">HEXRESTAURANT</router-link>
+        <router-link class="navbar-brand font-weight-bold" href="#" to="/">GA4-RESTAURANT</router-link>
         <button
           class="navbar-toggler"
           type="button"
