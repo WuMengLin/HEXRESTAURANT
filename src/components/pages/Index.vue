@@ -38,7 +38,7 @@
         <div class="container">
           <div class="row justify-content-end text-md-dark pt-5 pb-5 pl-5">
             <div class="col-md-7">
-              <h3>歡迎來到六角餐廳</h3>
+              <h3>歡迎來到GA4餐廳</h3>
               <p>遇到這些灰色道德地帶時，要到兩三年後才會比較有清楚的感受，而這正是為什麼西方公司會存活，作為一個年輕人，但是負責的人需要接受風險、喜歡冒險和願意負責。2，流感病毒攻心，春電展將開展，NBA明星周，低價電信資費戰，曼城主場連勝。</p>
               <a href="#" class="btn btn-outline-info">查看更多</a>
               <div class="row mt-4">
