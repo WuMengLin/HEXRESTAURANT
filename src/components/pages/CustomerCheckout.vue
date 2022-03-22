@@ -94,7 +94,7 @@ export default {
                 item_name: vm.order.products[Object.keys(vm.order.products)[i]].product.title,
                 affiliation: "HEXRESTAURANT",
                 coupon: "no_coupon",
-                currency: "NTD",
+                currency: "TWD",
                 discount: 0,
                 index: i,
                 item_brand: "HEXRESTAURANT",
@@ -129,7 +129,7 @@ export default {
             value: vm.order.total,
             tax: 0,
             shipping: "",
-            currency: "NTD",
+            currency: "TWD",
             coupon: "",
             items: vm.purchaseItem
           });

@@ -290,7 +290,7 @@ export default {
             item_name: vm.cart.carts[i].product.title,
             affiliation: "HEXRESTAURANT",
             coupon: "no_coupon",
-            currency: "NTD",
+            currency: "TWD",
             discount: 0,
             index: i,
             item_brand: "HEXRESTAURANT",
@@ -309,7 +309,7 @@ export default {
         )
       }
       gtag("event", "view_cart", {
-        currency: "NTD",
+        currency: "TWD",
         value: vm.cart.final_total,
         items: vm.viewCartItem
       });

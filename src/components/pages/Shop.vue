@@ -222,7 +222,7 @@ export default {
         this.$bus.$emit("updatacart:push");
         $("#productModal").modal("hide");
         gtag("event", "add_to_cart", {
-          currency: "NTD",
+          currency: "TWD",
           value: item.price * item.num,
           items: [
             {
@@ -230,7 +230,7 @@ export default {
               item_name: item.title,
               affiliation: "HEXRESTAURANT",
               coupon: "no_coupon",
-              currency: "NTD",
+              currency: "TWD",
               discount: 0,
               index: 0,
               item_brand: "HEXRESTAURANT",
