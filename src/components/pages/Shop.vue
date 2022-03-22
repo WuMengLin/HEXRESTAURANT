@@ -230,6 +230,10 @@ export default {
   },
   created() {
     this.getProducts();
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: '商品頁',
+      page_path: '/shop'
+    });
   }
 };
 </script>

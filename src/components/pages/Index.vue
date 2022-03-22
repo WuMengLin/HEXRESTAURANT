@@ -262,6 +262,12 @@ export default {
     return {};
   },
   methods: {
+  },
+  created(){
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: '首頁',
+      page_path: '/'
+    });
   }
 };
 </script>

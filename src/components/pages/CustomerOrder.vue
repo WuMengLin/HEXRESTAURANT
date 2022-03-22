@@ -312,6 +312,10 @@ export default {
   created() {
     this.getCarts();
     this.getProducts();
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: '結帳頁',
+      page_path: '/checkout'
+    });
   }
 };
 </script>

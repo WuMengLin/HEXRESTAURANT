@@ -11,7 +11,7 @@
             
             <h2>Aeschylus</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary text-light view-details-1" role="button" @click="viewDetails('view-details-1')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
@@ -19,7 +19,7 @@
             </div>
             <h2>Sophocles</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary text-light view-details-2" role="button" @click="viewDetails('view-details-2')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
@@ -27,7 +27,7 @@
             </div>
             <h2>Euripides</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary text-light view-details-3" role="button" @click="viewDetails('view-details-3')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -83,7 +83,20 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    viewDetails(item){
+      gtag("event", "select_content", {
+        content_type: "AboutUs",
+        item_id: item
+      });
+    }
+  },
+  created(){
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: '關於我們',
+      page_path: '/about'
+    });
+  }
 };
 </script>
 
