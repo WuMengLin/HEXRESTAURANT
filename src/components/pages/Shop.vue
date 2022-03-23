@@ -231,7 +231,7 @@ export default {
   created() {
     this.getProducts();
     gtag('config', 'G-7XPWZBWZHT', {
-      page_title: '商品頁',
+      page_title: 'GA4-RESTAURANT - 商品頁',
       page_path: '/shop'
     });
   }

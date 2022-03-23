@@ -265,7 +265,7 @@ export default {
   },
   created(){
     gtag('config', 'G-7XPWZBWZHT', {
-      page_title: '首頁',
+      page_title: 'GA4-RESTAURANT - 首頁',
       page_path: '/'
     });
   }
