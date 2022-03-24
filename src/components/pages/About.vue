@@ -151,8 +151,8 @@ export default {
     }
   },
   created(){
-    gtag('config', 'G-7XPWZBWZHT', {
-      page_title: 'GA4-RESTAURANT - 關於我們',
+    gtag('config', 'G-E7G6JH41FP', {
+      page_title: 'HEXRESTAURANT - 關於我們',
       page_path: '/about'
     });
   }

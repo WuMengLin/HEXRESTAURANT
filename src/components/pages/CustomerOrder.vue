@@ -316,8 +316,8 @@ export default {
   created() {
     this.getCarts();
     this.getProducts();
-    gtag('config', 'G-7XPWZBWZHT', {
-      page_title: 'GA4-RESTAURANT - 結帳頁',
+    gtag('config', 'G-E7G6JH41FP', {
+      page_title: 'HEXRESTAURANT - 結帳頁',
       page_path: '/checkout'
     });
   }

@@ -276,8 +276,8 @@ export default {
     },
   },
   created(){
-    gtag('config', 'G-7XPWZBWZHT', {
-      page_title: 'GA4-RESTAURANT - 首頁',
+    gtag('config', 'G-E7G6JH41FP', {
+      page_title: 'HEXRESTAURANT - 首頁',
       page_path: '/'
     });
   }

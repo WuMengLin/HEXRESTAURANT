@@ -142,8 +142,8 @@ export default {
       console.log(this.$route.params.orderId);
       this.orderId=this.$route.params.orderId;
       this.getOrder();
-      gtag('config', 'G-7XPWZBWZHT', {
-        page_title: 'GA4-RESTAURANT - 付款頁',
+      gtag('config', 'G-E7G6JH41FP', {
+        page_title: 'HEXRESTAURANT - 付款頁',
         page_path: '/customer_checkout'
     });
   }

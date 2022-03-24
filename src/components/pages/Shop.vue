@@ -284,8 +284,8 @@ export default {
   },
   created() {
     this.getProducts();
-    gtag('config', 'G-7XPWZBWZHT', {
-      page_title: 'GA4-RESTAURANT - 商品頁',
+    gtag('config', 'G-E7G6JH41FP', {
+      page_title: 'HEXRESTAURANT - 商品頁',
       page_path: '/shop'
     });
   }
