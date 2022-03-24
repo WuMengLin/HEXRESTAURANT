@@ -9,25 +9,83 @@
               <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1499530403357-0ea994f8655a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
             </div>
             
-            <h2>Aeschylus</h2>
+            <h2>Pc_Top - Aeschylus</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-top','pc-top-view-details-1')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
               <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1525272493553-dd8aa139b91d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
             </div>
-            <h2>Sophocles</h2>
+            <h2>Pc_Top - Sophocles</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-top','pc-top-view-details-2')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
               <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80" alt="Generic placeholder image" width="140" height="140">
             </div>
-            <h2>Euripides</h2>
+            <h2>Pc_Top - Euripides</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-top','pc-top-view-details-3')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+                <!-- Three columns of text below the carousel -->
+        <div class="row pt-5 ">
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4" style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1499530403357-0ea994f8655a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            
+            <h2>Mobile - Aeschylus</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('mobile','mobile-view-details-1')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1525272493553-dd8aa139b91d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            <h2>Mobile - Sophocles</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('mobile','mobile-view-details-2')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            <h2>Mobile - Euripides</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('mobile','mobile-view-details-3')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row pt-5 ">
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4" style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1499530403357-0ea994f8655a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            
+            <h2>Pc_Bottom - Aeschylus</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-bottom','pc-bottom-view-details-1')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1525272493553-dd8aa139b91d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            <h2>Pc_Bottom - Sophocles</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-bottom','pc-bottom-view-details-2')">View details »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="PopPhoto mb-4 " style="width:140px;height:140px;margin: 0 auto;">
+              <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80" alt="Generic placeholder image" width="140" height="140">
+            </div>
+            <h2>Pc_Bottom - Euripides</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button" @click.prevent="viewDetails('pc-bottom','pc-bottom-view-details-3')">View details »</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -83,7 +141,21 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    viewDetails(item_area,item_info){
+      gtag("event", "click_about_viewDetails", {
+        item_area: item_area,
+        item_info: item_info
+      });
+      alert('已記錄事件 '+item_area+' , '+item_info);
+    }
+  },
+  created(){
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: 'GA4-RESTAURANT - 關於我們',
+      page_path: '/about'
+    });
+  }
 };
 </script>
 

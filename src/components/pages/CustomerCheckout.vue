@@ -142,6 +142,10 @@ export default {
       console.log(this.$route.params.orderId);
       this.orderId=this.$route.params.orderId;
       this.getOrder();
+      gtag('config', 'G-7XPWZBWZHT', {
+        page_title: 'GA4-RESTAURANT - 付款頁',
+        page_path: '/customer_checkout'
+    });
   }
 };
 </script>

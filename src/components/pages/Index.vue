@@ -273,7 +273,13 @@ export default {
         'event_category': 'Click',
         'event_label': '聯絡我們',
       });
-    }
+    },
+  },
+  created(){
+    gtag('config', 'G-7XPWZBWZHT', {
+      page_title: 'GA4-RESTAURANT - 首頁',
+      page_path: '/'
+    });
   }
 };
 </script>
