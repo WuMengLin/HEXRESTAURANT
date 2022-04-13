@@ -139,13 +139,13 @@ export default {
     }
   },
   created(){
-      console.log(this.$route.params.orderId);
-      this.orderId=this.$route.params.orderId;
-      this.getOrder();
-      gtag('config', 'G-E7G6JH41FP', {
-        page_title: 'HEXRESTAURANT - 付款頁',
-        page_path: '/customer_checkout'
-    });
+    console.log(this.$route.params.orderId);
+    this.orderId=this.$route.params.orderId;
+    this.getOrder();
+    // gtag('config', 'G-E7G6JH41FP', {
+    //   page_title: 'HEXRESTAURANT - 付款頁',
+    //   page_path: '/customer_checkout'
+    // });
   }
 };
 </script>

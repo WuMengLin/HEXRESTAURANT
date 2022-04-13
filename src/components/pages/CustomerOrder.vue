@@ -316,10 +316,10 @@ export default {
   created() {
     this.getCarts();
     this.getProducts();
-    gtag('config', 'G-E7G6JH41FP', {
-      page_title: 'HEXRESTAURANT - 結帳頁',
-      page_path: '/checkout'
-    });
+    // gtag('config', 'G-E7G6JH41FP', {
+    //   page_title: 'HEXRESTAURANT - 結帳頁',
+    //   page_path: '/checkout'
+    // });
   }
 };
 </script>

@@ -180,7 +180,7 @@ export default {
         $("#productModal").modal("show");
         vm.product.num = 1;
         gtag("event", "view_item", {
-          currency: "NTD",
+          currency: "TWD",
           value: vm.product.price,
           items: [
             {
@@ -188,7 +188,7 @@ export default {
               item_name: vm.product.title,
               affiliation: "HEXRESTAURANT",
               coupon: "no_coupon",
-              currency: "NTD",
+              currency: "TWD",
               discount: 0,
               index: 0,
               item_brand: "HEXRESTAURANT",
@@ -284,10 +284,10 @@ export default {
   },
   created() {
     this.getProducts();
-    gtag('config', 'G-E7G6JH41FP', {
-      page_title: 'HEXRESTAURANT - 商品頁',
-      page_path: '/shop'
-    });
+    // gtag('config', 'G-E7G6JH41FP', {
+    //   page_title: 'HEXRESTAURANT - 商品頁',
+    //   page_path: '/shop'
+    // });
   }
 };
 </script>
