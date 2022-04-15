@@ -36,6 +36,12 @@ new Vue({
 })
 
 router.beforeEach((to, from, next) => {
+  // document.title = `${to.name} - HEXRESTAURANT`;
+  // gtag('config', 'G-7XPWZBWZHT', {
+  //   page_title: `HEXRESTAURANT - ${to.name}`,
+  //   page_path: to.path,
+  //   page_location: `https://wumenglin.github.io/project-ga/dist/index.html#${to.path}`
+  // });
   //console.log(to, from, next);
   if(to.meta.requiresAuth){
       console.log('**進入此頁面需驗證**');

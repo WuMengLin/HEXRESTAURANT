@@ -81,26 +81,32 @@ export default new VueRouter({
         children: [
           {
             path: '',
+            name:'首頁',
             component: Index,
           },
           {
             path: '/shop',
+            name:'商品頁',
             component: Shop,
           },
           {
             path: '/about',
+            name:'關於我們',
             component: About,
           },
           {
             path: '/support',
+            name:'註冊頁',
             component: Support,
           },
           {
             path: '/checkout',
+            name:'結帳頁',
             component: Checkout,
           },
           {
             path: 'customer_checkout/:orderId',
+            name:'付款頁',
             component: CustomerCheckout,
           },
         ]
