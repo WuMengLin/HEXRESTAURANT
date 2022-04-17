@@ -8,7 +8,6 @@
             <div class="PopPhoto mb-4" style="width:140px;height:140px;margin: 0 auto;">
               <img class="rounded-circle ImgGray" src="https://images.unsplash.com/photo-1499530403357-0ea994f8655a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Generic placeholder image" width="140" height="140">
             </div>
-            
             <h2>Aeschylus</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-secondary text-light view-details-1" role="button">View details »</a></p>
